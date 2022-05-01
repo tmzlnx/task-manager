@@ -1,0 +1,20 @@
+languade: android
+dist: trusty
+android:
+  components:
+
+    # The BuildTools version used by your project
+    - build-tools-26.0.2
+
+    # the sdk verion used to compile your project
+    - android-26
+
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+    # - sys-img-x86-android-26
+    # - sys-img-armeabi-v7a-android-17
+  script:
+    - ./gradlew test --no-daemon
